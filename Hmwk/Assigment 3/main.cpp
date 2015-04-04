@@ -40,10 +40,21 @@ using namespace std;
 int main(int argc, char** argv) {
     
     int choose;
-    cout << " Choose you program:" << endl;
+    cout << " Choose you program or enter -1 to exit:" << endl;
+    cout << "1: Exercise 10.4" << endl;
+    cout << "2: Exercise 10.6" << endl;
+    cout << "3: Exercise 11.9" << endl;
+    cout << "4: Exercise 12.7" << endl;
+    cout << "5: Exercise 12.8" << endl;
+    cout << "6: Exercise 12.11" << endl;
+    cout << "7: Exercise 12.9" << endl;
+    cout << "8: Exercise 11.6" << endl;
+    cout << "8: Exercise 11.12" << endl;
+    cout << "10: Exercise 10.8" << endl;
             cin >> choose;
             
-            do{
+            while(choose != -1)
+            {
             
     switch (choose)
     {
@@ -84,7 +95,7 @@ int main(int argc, char** argv) {
     cout << endl;
     cout << "Choose your program or press -1 to exit:" << endl; 
     cin >> choose;
-            }while(choose != -1);
+            }
     return 0;
 }
 
@@ -127,9 +138,23 @@ void e5()
 }
 void e6()
 {
+    cout << "The difference between a tellg and tellp is that";
+    cout << " tellg is used to get the position in an input sequence";
+    cout << " but tellp is used to get the position in an output sequence";
+    cout << endl;
 }
 void e7()
 {
+    const int SIZE = 5;
+    ofstream outfile("out.txt");
+    double nums[SIZE] = {100.279, 1.719, 8.602, 7.777, 5.099};
+    outfile << fixed << setprecision(2);
+    for (int count = 0; count < 5; count++)
+    {
+        outfile << setw(8) << nums[count];
+    }
+    outfile.close();
+    
 }
 void e8()
 {
