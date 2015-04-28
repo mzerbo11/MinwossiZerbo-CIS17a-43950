@@ -27,6 +27,7 @@
     </logicalFolder>
     <itemPath>output.txt</itemPath>
     <itemPath>output2.txt</itemPath>
+    <itemPath>track.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -43,6 +44,8 @@
       <item path="output.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -70,6 +73,8 @@
       <item path="output.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

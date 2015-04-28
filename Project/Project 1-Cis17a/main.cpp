@@ -9,20 +9,16 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-#include <ctime>
+
 
 using namespace std;
 // Useful variables
 
 // Constant variables
 
-const double pound = 2.2046;
+
 
 // Functions prototypes for the program
-
-
-
-
 void ManagerTrack();
 /*
  * 
@@ -31,13 +27,53 @@ void ManagerTrack();
 // Beginning of the execution
 int main(int argc, char** argv) {
 
+    // Dynamic array declaration for the pin numbers
     int *pin; 
     pin = new int[3];
-    cout << "";
+    // Pin numbers for unlocking
+    pin[0] = 4518;
+    pin[1] = 5612;
+    pin[2] = 6310;
+    cout << "Hello. Enter a valid pin number to unlock: ";
+    string name;
+    int enterPin;
+    cin >> enterPin;
+    
+    if(enterPin == 4518 || enterPin == 5612 || enterPin == 6310 )
+    {
+        cout << "Enter your name: ";
+        cin >> name;
+        cout << "Hello Mr " << name << endl;
+    }
+    // Checking for wrong pin
+    else
+    {
+        cout << "Pin number wrong. Enter again: ";
+        cin >> enterPin;
+        do
+        {
+        cout << "Pin number wrong. Enter again: ";
+        cin >> enterPin;
+        }while(enterPin != 4518 && enterPin != 5612 && enterPin != 6310 );
+    
+        cout << "Enter your name: ";
+        cin >> name;
+        cout << "Hello Mr " << name << endl;
+    }
+    // execution of the managing software
     ManagerTrack();
+    
+                ofstream outfile2("track.txt", ios::app);
+ 
+               outfile2 <<setw(16) << "Log in sheet" << endl;
+               outfile2 << name;
+               outfile2.close();
+    
+    // delete the array at the end
+    delete []pin;
     return 0;
 }
-
+// Function for the managing software
 void ManagerTrack()
 {
 
