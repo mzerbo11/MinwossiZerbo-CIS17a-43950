@@ -1,4 +1,0 @@
-Category        Amount  
-Category        Amount  
-Category        Amount  
-beer    32      

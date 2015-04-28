@@ -31,7 +31,9 @@ void ManagerTrack();
 // Beginning of the execution
 int main(int argc, char** argv) {
 
-    
+    int *pin; 
+    pin = new int[3];
+    cout << "";
     ManagerTrack();
     return 0;
 }
@@ -104,9 +106,7 @@ void ManagerTrack()
             
            cout << "Delivery received on " << day << "/" << month << "/";
            cout << year << endl;
-           
-         
-               
+            
            for(int i = 0; i < itemNum; i++)
            {
                
@@ -119,7 +119,7 @@ void ManagerTrack()
   outfile1 <<left<< setw(16) << "Category" << setw(8) << "Amount" << endl;
     for (int i = 0; i < itemNum; i++)
     { 
-               outfile1 << left << setw(8) << received[i].items;
+               outfile1 << left << setw(16) << received[i].items;
                outfile1 << left << setw(8) << received[i].numberItem;
     }
   // Close the file
