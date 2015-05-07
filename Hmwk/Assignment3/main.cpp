@@ -76,9 +76,46 @@ int main(int argc, char** argv) {
 }
 
 void ex1()
-{}
+{
+  class Tank
+  {
+  private:
+      int gallons;
+  public:
+      Tank()
+      {gallons = 50;}
+      Tank (int gal)
+      {gallons = gal;}
+      int getGallons()
+      {return gallons;}
+          
+  };  
+
+        Tank storage[3] = {10, 20};
+      for(int index = 0; index <3; index++)
+          cout << storage[index].getGallons() << endl;
+
+}
 void ex2()
-{}
+{
+    class Package
+    {
+    private: 
+        int value;
+    public:
+        Package()
+        {value = 7; cout << value << endl;}
+        Package(int v)
+        {value = v; cout << value << endl;}
+        ~Package()
+        {cout << value << endl;}
+    
+    };
+    
+    Package obj1(4);
+    Package obj2();
+    Package obj3(2);
+}
 void ex3()
 {}
 void ex4()
