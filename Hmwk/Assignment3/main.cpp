@@ -113,7 +113,7 @@ void ex2()
     };
     
     Package obj1(4);
-    Package obj2();
+    Package obj2(3);
     Package obj3(2);
 }
 void ex3()
