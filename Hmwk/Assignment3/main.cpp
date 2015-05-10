@@ -117,9 +117,89 @@ void ex2()
     Package obj3(2);
 }
 void ex3()
-{}
+{
+    class Yard
+    {
+    private: 
+        int length, width;
+    public:
+        Yard()
+        {length = 0; width = 0;}
+        setLength(int len)
+        {length = len;}
+        setWidth(int w)
+        {width = w;}
+        getLength()
+        {return length;}
+        getWidth()
+        {return width;}
+    };
+    
+    cout << "How many yard do you want to create: ";
+    int yard;
+    cin >> yard;
+    Yard numYard[yard];
+    int count = 1;
+    for(int i = 0; i < yard; i++)
+    {
+        cout << "Enter the length of yard #" << count << ": ";
+        int length;
+        cin >> length;
+        numYard[i].setLength(length);
+        
+        cout << "Enter the width of yard #" << count << ": ";
+        int width;
+        cin >> width;
+        numYard[i].setWidth(width);
+        count++;
+        cout << endl;
+    }
+    count = 1;
+    for(int i = 0; i < yard; i++)
+    {
+        cout << "YARD #" << count << ": ";
+        cout << "Length = " << numYard[i].getLength() << "; ";
+        cout << "Width = " << numYard[i].getWidth();
+        cout << endl;
+        count++;
+    }
+}
 void ex4()
-{}
+{
+    class phoneNumber
+    {
+    private:
+        int number;
+        string name;
+    public:
+        phoneNumber()
+        {number = 0; string = " ";}
+        setPhone(int p)
+        {number = p;}
+        setName(string n)
+        {string = n;}
+        getPhone()
+        {return number;}
+        getName()
+        {return name;}
+    };
+    
+    phoneNumber customer;
+    
+    cout << "Enter your name: ";
+    string name;
+    cin >> name;
+    customer.setName(name);
+    
+     cout << "Enter your phone number: ";
+        int phoneNum;
+        cin >> phoneNum;
+      customer.setPhone(phoneNum);
+      
+      cout << "Name: " << customer.getName() << endl;
+      cout << "Phone Number: " << customer.getPhone() << endl;
+      
+}
 void ex5()
 {}
 void ex6()
