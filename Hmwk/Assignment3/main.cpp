@@ -173,15 +173,15 @@ void ex4()
         string name;
     public:
         phoneNumber()
-        {number = 0; string = " ";}
+        {number = 0; name = " " ;}
         setPhone(int p)
         {number = p;}
         setName(string n)
-        {string = n;}
+        {name = n;}
         getPhone()
         {return number;}
         getName()
-        {return name;}
+        {cout << name;}
     };
     
     phoneNumber customer;
@@ -196,7 +196,7 @@ void ex4()
         cin >> phoneNum;
       customer.setPhone(phoneNum);
       
-      cout << "Name: " << customer.getName() << endl;
+      cout << "Name: " ; customer.getName(); cout << endl;
       cout << "Phone Number: " << customer.getPhone() << endl;
       
 }
