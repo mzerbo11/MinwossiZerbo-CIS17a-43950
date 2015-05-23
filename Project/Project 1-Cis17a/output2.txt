@@ -1,0 +1,3 @@
+Category        Amount  
+beer            56      juice           5       soda            6       cruits          23      Category        Amount  
+beer            52      juice           6       candy           6       grocery         5       soda            2       condoms         8       
