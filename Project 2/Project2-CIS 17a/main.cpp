@@ -81,6 +81,10 @@ void ManagerTrack()
     cout << "What do you want to do today: " << endl;
     cout << "1. Take inventory" << endl;
     cout << "2. Calculate the pay of your employees" << endl;
+    cout << "3. Hire an employee" << endl;
+    cout << "4. Day benefit" << endl;
+    cout << "5. Make a schedule" << endl;
+    cout << "6. Calculate business benefit" << endl;
     
     
     int choose;
@@ -90,6 +94,7 @@ void ManagerTrack()
     switch (choose)
     {
     
+        // take inventory
         case 1: 
             
             // Structure declaration
@@ -163,6 +168,8 @@ void ManagerTrack()
     outfile1.close();
             }
             break;
+            
+        // Calculate the pay of the employees
         case 2:
              // declaration of the structure
         struct globalPayroll
@@ -234,6 +241,25 @@ void ManagerTrack()
     outfile.close();
     
             break;
-        
+//        case 3:
+//        
+//            break;
+           // Hire an employee
+//        case 3:
+//            
+//            break;
+//            // Day benefit
+//        case 4:
+//            
+//            break;
+//           // Make a schedule
+//        case 5:
+//            
+//            break;
+//          // Business benefit
+//        case 6:
+//            
+//            break;
+                    
     }
 }
