@@ -14,6 +14,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>main.cpp</itemPath>
+      <itemPath>manager.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -26,6 +27,9 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>output.txt</itemPath>
+    <itemPath>output2.txt</itemPath>
+    <itemPath>track.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -39,7 +43,15 @@
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="manager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -64,7 +76,15 @@
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="manager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

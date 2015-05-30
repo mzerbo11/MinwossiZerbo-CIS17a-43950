@@ -8,30 +8,50 @@
 #ifndef MANAGER_H
 #define	MANAGER_H
 #include <cstring>
+#include <string>
 
 class Employee
 {
 private:
-    char *fName; // Employee first name
-    char *lName; // Employe last name
+    std::string fName;
+    std::string lName;
+//    char *fName; // Employee first name
+//    char *lName; // Employee last name
+    int phoneN;
 public:
     // constructor
-    Employee(char *f, char *l)
-    {
-        // Allocate memory for the names
-        fName = new char[strlen(f) + 1];
-        lName = new char[strlen(l) + 1];
-        
-        // Copy the name to the designed allocated memory
-        strcpy(fName, f);
-        strcpy(lName, l);
-    }
+//    Employee(std::string *f, std::string *l)
+//    {
+//        // Allocate memory for the names
+//        fName = new char[strlen(f) + 1];
+//        lName = new char[strlen(l) + 1];
+//        
+//        // Copy the name to the designed allocated memory
+//        strcpy(fName, f);
+//        strcpy(lName, l);
+//    }
     
-    ~Employee()
-    {
-        delete [] fName;
-        delete [] lName;
-    }
+    Employee()
+    { fName = ""; lName = "";}
+    void setPhonenum(int n)
+    {phoneN = n;}
+    
+    void setfName(std::string n)
+    {fName = n;}
+    void setlName(std::string l)
+    {lName = l;}
+    
+    std::string getfName(std::string r)
+    {return fName;}
+    std::string getlName(std::string e)
+    {return lName;}
+    int getNum(int num)
+    {return phoneN;}
+    ~Employee();
+//    {
+//        delete [] fName;
+//        delete [] lName;
+//    }
     
 };
 

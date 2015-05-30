@@ -1,0 +1,2 @@
+Employee Name   Payment 
+Minwossi        344.50  Big             0.00    

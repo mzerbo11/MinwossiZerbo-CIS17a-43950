@@ -80,11 +80,11 @@ void ManagerTrack()
 
     cout << "What do you want to do today: " << endl;
     cout << "1. Take inventory" << endl;
-    cout << "2. Calculate the pay of your employees" << endl;
-    cout << "3. Hire an employee" << endl;
-    cout << "4. Day benefit" << endl;
-    cout << "5. Make a schedule" << endl;
-    cout << "6. Calculate business benefit" << endl;
+    cout << "2. Hire an employee" << endl;
+    cout << "3. Day benefit" << endl;
+    cout << "4. Make a schedule" << endl;
+    cout << "5. Calculate business benefit" << endl;
+    cout << "6. Calculate the pay of your employees" << endl;
     
     
     int choose;
@@ -163,14 +163,57 @@ void ManagerTrack()
     { 
                outfile1 << left << setw(16) << received[i].items;
                outfile1 << left << setw(8) << received[i].numberItem;
+               outfile1 << endl;
     }
   // Close the file
     outfile1.close();
             }
             break;
             
-        // Calculate the pay of the employees
+            
+             //Hire an employee
         case 2:
+            
+            Employee hiring;
+            cout << "Enter the date: ";
+            int date1,month1,year1;
+            
+            cin >> date1 >> month1 >> year1;
+            
+                do
+                {
+                     cout << "Wrong date. Enter a valid date: ";
+                     cin >> date1 >> month1 >> year1;
+                }while(date1 > 31 || date1 < 1 && month1 > 12 || month1 < 1  );
+            
+                cout << "Enter the employee First name: ";
+                char firstName;
+                cin >> firstName;
+                cout << "Enter the employee last name: ";
+                char lastName;
+                cin >> lastName;
+                cout << "Enter the employee phone number: ";
+                int phoneNum;
+                // for phone number format design
+                cin >> phoneNum;
+                hiring.setPhonenum(phoneNum);
+                hiring.setfName(firstName);
+                
+            break;
+            // Day benefit
+        case 3:
+            
+            break;
+           // Make a schedule
+        case 4:
+            
+            break;
+          // Business benefit
+        case 5:
+            
+            break;
+        // Calculate the pay of the employees
+        case 6:
              // declaration of the structure
         struct globalPayroll
         {
@@ -235,31 +278,17 @@ void ManagerTrack()
         // Writing the data to the file
       outfile << left << setw(16) << employees[i].name ;
       outfile << setw(8) << employees[i].money;
-      cout << endl;
+      outfile << endl;
     }
   // Close the file
     outfile.close();
     
             break;
-//        case 3:
-//        
+        
+           
+//                    
+//        default:
+//            cout << "Invalid selection" << endl;
 //            break;
-           // Hire an employee
-//        case 3:
-//            
-//            break;
-//            // Day benefit
-//        case 4:
-//            
-//            break;
-//           // Make a schedule
-//        case 5:
-//            
-//            break;
-//          // Business benefit
-//        case 6:
-//            
-//            break;
-                    
     }
 }
