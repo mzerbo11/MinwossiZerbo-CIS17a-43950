@@ -10,7 +10,7 @@
 #include <cstring>
 #include <string>
 
-class Employee
+ class Employee
 {
 private:
     std::string fName;
@@ -18,19 +18,7 @@ private:
 //    char *fName; // Employee first name
 //    char *lName; // Employee last name
     int phoneN;
-public:
-    // constructor
-//    Employee(std::string *f, std::string *l)
-//    {
-//        // Allocate memory for the names
-//        fName = new char[strlen(f) + 1];
-//        lName = new char[strlen(l) + 1];
-//        
-//        // Copy the name to the designed allocated memory
-//        strcpy(fName, f);
-//        strcpy(lName, l);
-//    }
-    
+public: 
     Employee()
     { fName = ""; lName = "";}
     void setPhonenum(int n)
@@ -47,13 +35,24 @@ public:
     {return lName;}
     int getNum(int num)
     {return phoneN;}
-    ~Employee();
+    //~Employee();
 //    {
 //        delete [] fName;
 //        delete [] lName;
 //    }
     
 };
+ // constructor
+//    Employee(std::string *f, std::string *l)
+//    {
+//        // Allocate memory for the names
+//        fName = new char[strlen(f) + 1];
+//        lName = new char[strlen(l) + 1];
+//        
+//        // Copy the name to the designed allocated memory
+//        strcpy(fName, f);
+//        strcpy(lName, l);
+//    }
 
 class Shift
 {
@@ -73,12 +72,22 @@ public:
      date = 0; month = 0; year = 0; hour = 0; minute = 0;}
     void getObalance(float b);
     void getCbalance(float c);
-    void getbenefit();
+    void getBenefit(float i, float j);
     void setDate(int d);
     void setMonth(int m);
     void setYear(int y);
     void setHour(int h);
     void setMinute(int m);
+    
+    float giveO();
+    float giveC();
+    float giveB();
+    int giveDate();
+    int giveMonth();
+    int giveYear();
+    int giveHour();
+    int giveMinute();
+    
 };
 
 #endif	

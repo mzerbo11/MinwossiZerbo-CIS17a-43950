@@ -20,7 +20,7 @@ using namespace std;
 
 
 // Functions prototypes for the program
-void ManagerTrack();
+//void ManagerTrack();
 /*
  * 
  */
@@ -28,6 +28,10 @@ void ManagerTrack();
 // Beginning of the execution
 int main(int argc, char** argv) {
 
+    
+            
+            
+          
     // Dynamic array declaration for the pin numbers
     int *pin; 
     pin = new int[3];
@@ -62,22 +66,8 @@ int main(int argc, char** argv) {
         cout << "Hello Mr " << name << endl;
     }
     // execution of the managing software
-    ManagerTrack();
     
-                ofstream outfile2("track.txt", ios::app);
- 
-               outfile2 <<setw(16) << "Log in sheet" << endl;
-               outfile2 << name;
-               outfile2.close();
     
-    // delete the array at the end
-    delete []pin;
-    return 0;
-}
-// Function for the managing software
-void ManagerTrack()
-{
-
     cout << "What do you want to do today: " << endl;
     cout << "1. Take inventory" << endl;
     cout << "2. Hire an employee" << endl;
@@ -170,11 +160,13 @@ void ManagerTrack()
             }
             break;
             
-            
+           
              //Hire an employee
         case 2:
-            
+        {
             Employee hiring;
+            
+            
             cout << "Enter the date: ";
             int date1,month1,year1;
             
@@ -182,15 +174,15 @@ void ManagerTrack()
             
                 do
                 {
-                     cout << "Wrong date. Enter a valid date: ";
+                     cout << "Invalid date. Enter a valid date: ";
                      cin >> date1 >> month1 >> year1;
                 }while(date1 > 31 || date1 < 1 && month1 > 12 || month1 < 1  );
             
                 cout << "Enter the employee First name: ";
-                char firstName;
+                string firstName;
                 cin >> firstName;
                 cout << "Enter the employee last name: ";
-                char lastName;
+                string lastName;
                 cin >> lastName;
                 cout << "Enter the employee phone number: ";
                 int phoneNum;
@@ -198,11 +190,65 @@ void ManagerTrack()
                 cin >> phoneNum;
                 hiring.setPhonenum(phoneNum);
                 hiring.setfName(firstName);
+                hiring.getlName(lastName);
                 
+        }
             break;
             // Day benefit
         case 3:
-            
+        {
+            Shift benefitDay;
+            cout << "Enter the date: ";
+            int day2,month2,year2;
+            cin >> day2,month2,year2;
+            //check for invalid entry
+            do
+                {
+                     cout << "Invalid date. Enter a valid date: ";
+                     cin >> day2 >> month2 >> year2;
+                }while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1  );
+                cout << "Enter the time: ";
+                int hour,minute;
+                cin >> hour >> minute;
+                do
+                {
+                     cout << "Invalid time. Enter a valid time: ";
+                     cin >> hour >> minute;
+                } while(hour > 24 || hour < 1 && minute > 59 || minute < 00);
+                
+                // Date of the day
+                benefitDay.setDate(day2);
+                // month
+                benefitDay.setMonth(month2);
+                // year
+                benefitDay.setYear(year2);
+                
+                // Time
+                benefitDay.setHour(hour);
+                benefitDay.setMinute(minute);
+                cout << "Enter the opening balance:";
+                float openBal;
+                cin >> openBal;
+                
+                // setting the opening balance
+                benefitDay.getObalance(openBal);
+                
+                cout << "Enter the closing balance: ";
+                float closeBal;
+                cin >> closeBal;
+                
+                //setting th closing balance
+                benefitDay.getCbalance(closeBal);
+                // calculate the benefit of the day
+                benefitDay.getBenefit(closeBal,openBal);
+                
+                cout << "Date: " << benefitDay.giveDate() << "/";
+                cout << benefitDay.giveMonth()<<"/" ;
+                cout << benefitDay.giveYear() << endl;
+                cout << "Time: " << benefitDay.giveHour()<< ":";
+                cout << benefitDay.giveMinute();
+                
+        }
             break;
            // Make a schedule
         case 4:
@@ -291,4 +337,21 @@ void ManagerTrack()
 //            cout << "Invalid selection" << endl;
 //            break;
     }
+    //ManagerTrack();
+    
+                ofstream outfile2("track.txt", ios::app);
+ 
+               outfile2 <<setw(16) << "Log in sheet" << endl;
+               outfile2 << name;
+               outfile2.close();
+    
+    // delete the array at the end
+    delete []pin;
+    return 0;
 }
+// Function for the managing software
+//void ManagerTrack()
+//{
+    
+
+//}
