@@ -29,6 +29,8 @@
     </logicalFolder>
     <itemPath>output.txt</itemPath>
     <itemPath>output2.txt</itemPath>
+    <itemPath>output3.txt</itemPath>
+    <itemPath>output4.txt</itemPath>
     <itemPath>track.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -50,6 +52,10 @@
       <item path="output.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output3.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output4.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>
@@ -83,6 +89,10 @@
       <item path="output.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="output2.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output3.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="output4.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="track.txt" ex="false" tool="3" flavor2="0">
       </item>

@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
         }while(enterPin != 4518 && enterPin != 5612 && enterPin != 6310 );
     
         cout << "Enter your name: ";
-        cin >> name;
+        getline(cin, name);
         cout << "Hello Mr " << name << endl;
     }
     // execution of the managing software
@@ -190,8 +190,20 @@ int main(int argc, char** argv) {
                 cin >> phoneNum;
                 hiring.setPhonenum(phoneNum);
                 hiring.setfName(firstName);
-                hiring.getlName(lastName);
+                hiring.setlName(lastName);
+                cout <<"This employee was added to your list of employees: ";
+                cout <<"Name: "<<hiring.getlName() << " " << hiring.getfName();
+                cout << "Phone Number: " << hiring.getNum();
                 
+                ofstream outfile2("output3.txt", ios::app);
+                outfile2 << fixed << showpoint << setprecision(2);
+   outfile2 <<left<< setw(16) << "First Name" << setw(8) << "Last Name" << endl;
+                outfile2 << left << setw(16) << hiring.getlName();
+                outfile2 << left << setw(8) << hiring.getfName();
+                outfile2 << endl;
+    
+  // Close the file
+    outfile2.close();
         }
             break;
             // Day benefit
@@ -200,13 +212,13 @@ int main(int argc, char** argv) {
             Shift benefitDay;
             cout << "Enter the date: ";
             int day2,month2,year2;
-            cin >> day2,month2,year2;
+            cin >> day2 >> month2 >> year2;
             //check for invalid entry
             do
-                {
-                     cout << "Invalid date. Enter a valid date: ";
-                     cin >> day2 >> month2 >> year2;
-                }while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1  );
+            {
+              cout << "Invalid date. Enter a valid date: ";
+              cin >> day2 >> month2 >> year2;
+            }while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1);
                 cout << "Enter the time: ";
                 int hour,minute;
                 cin >> hour >> minute;
@@ -247,6 +259,18 @@ int main(int argc, char** argv) {
                 cout << benefitDay.giveYear() << endl;
                 cout << "Time: " << benefitDay.giveHour()<< ":";
                 cout << benefitDay.giveMinute();
+                cout <<"The benefit of the day was: " <<benefitDay.giveB();
+                cout << fixed << showpoint << setprecision(2);
+                
+                ofstream outfile3("output4.txt", ios::app);
+                outfile3 << fixed << showpoint << setprecision(2);
+           outfile3<<left<<setw(16) << "Date: " << benefitDay.giveDate() << "/";
+                outfile3 << benefitDay.giveMonth()<<"/" ;
+                outfile3 << benefitDay.giveYear() << "          ";
+                outfile3 << "Time: " << benefitDay.giveHour()<< ":";
+                outfile3 << benefitDay.giveMinute()<< endl;
+                outfile3 <<"The benefit of this day is: "<< benefitDay.giveB();
+                outfile3 << endl;
                 
         }
             break;

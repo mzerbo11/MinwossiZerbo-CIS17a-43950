@@ -29,11 +29,11 @@ public:
     void setlName(std::string l)
     {lName = l;}
     
-    std::string getfName(std::string r)
+    std::string getfName()
     {return fName;}
-    std::string getlName(std::string e)
+    std::string getlName()
     {return lName;}
-    int getNum(int num)
+    int getNum()
     {return phoneN;}
     //~Employee();
 //    {
