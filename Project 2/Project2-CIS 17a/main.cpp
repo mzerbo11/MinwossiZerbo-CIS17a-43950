@@ -20,7 +20,7 @@ using namespace std;
 
 
 // Functions prototypes for the program
-//void ManagerTrack();
+  void managerTrack();
 /*
  * 
  */
@@ -67,20 +67,34 @@ int main(int argc, char** argv) {
     }
     // execution of the managing software
     
+    managerTrack();
     
-    cout << "What do you want to do today: " << endl;
+     ofstream outfile2("track.txt", ios::app);
+               outfile2 <<setw(16) << "Log in sheet" << endl;
+               outfile2 <<"Name: " << name << endl;
+               outfile2.close();  
+    
+    // delete the array at the end
+    delete []pin;
+    return 0;
+}
+// Function for the managing software
+void managerTrack()
+{
+  cout << "What do you want to do today: " << endl;
     cout << "1. Take inventory" << endl;
     cout << "2. Hire an employee" << endl;
     cout << "3. Day benefit" << endl;
     cout << "4. Make a schedule" << endl;
     cout << "5. Calculate business benefit" << endl;
     cout << "6. Calculate the pay of your employees" << endl;
-    
+    cout << "-1. EXIT" << endl;
     
     int choose;
     cin >> choose;
     
-    
+    while(choose != -1)
+    {
     switch (choose)
     {
     
@@ -214,20 +228,19 @@ int main(int argc, char** argv) {
             int day2,month2,year2;
             cin >> day2 >> month2 >> year2;
             //check for invalid entry
-            do
+            while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1)
             {
               cout << "Invalid date. Enter a valid date: ";
               cin >> day2 >> month2 >> year2;
-            }while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1);
+            }
                 cout << "Enter the time: ";
                 int hour,minute;
                 cin >> hour >> minute;
-                do
-                {
-                     cout << "Invalid time. Enter a valid time: ";
-                     cin >> hour >> minute;
-                } while(hour > 24 || hour < 1 && minute > 59 || minute < 00);
-                
+            while(hour > 24 || hour < 1 && minute > 59 || minute < 00); 
+            {
+               cout << "Invalid time. Enter a valid time: ";
+               cin >> hour >> minute;
+            }   
                 // Date of the day
                 benefitDay.setDate(day2);
                 // month
@@ -264,26 +277,47 @@ int main(int argc, char** argv) {
                 
                 ofstream outfile3("output4.txt", ios::app);
                 outfile3 << fixed << showpoint << setprecision(2);
-           outfile3<<left<<setw(16) << "Date: " << benefitDay.giveDate() << "/";
+                outfile3 << "Date: " << benefitDay.giveDate() << "/";
                 outfile3 << benefitDay.giveMonth()<<"/" ;
                 outfile3 << benefitDay.giveYear() << "          ";
                 outfile3 << "Time: " << benefitDay.giveHour()<< ":";
                 outfile3 << benefitDay.giveMinute()<< endl;
                 outfile3 <<"The benefit of this day is: "<< benefitDay.giveB();
                 outfile3 << endl;
+                outfile3.close();
                 
         }
             break;
            // Make a schedule
         case 4:
-            
-            break;
+        {
+            ofstream outfile4("schedule.txt", ios::app);
+                outfile4 << fixed << showpoint << setprecision(2);
+                outfile4<<right << setw(15) << "Monday";
+                outfile4<<right << setw(15) << "Tuesday";
+                outfile4<<right << setw(15) << "Wednesday";
+                outfile4<<right << setw(15) << "Thursday";
+                outfile4<<right << setw(15) << "Friday";
+                outfile4<<right << setw(15) << "Saturday";
+                outfile4<<right << setw(15) << "Sunday";
+                outfile4 <<endl;
+                outfile4 <<left <<setw(9)<<"Shift 1";
+                outfile4 <<left <<setw(14) << "ibahim";
+                outfile4 <<left <<setw(15) << "moustapha";
+                outfile4 <<endl;
+                outfile4 << endl;
+                outfile4 <<endl;
+                outfile4 << endl;
+                outfile4.close();
+        }
+        break;
           // Business benefit
         case 5:
             
             break;
         // Calculate the pay of the employees
         case 6:
+        {
              // declaration of the structure
         struct globalPayroll
         {
@@ -352,30 +386,29 @@ int main(int argc, char** argv) {
     }
   // Close the file
     outfile.close();
-    
+        }
             break;
-        
-           
+     
 //                    
-//        default:
-//            cout << "Invalid selection" << endl;
-//            break;
+         default:
+         
+          cout << "Invalid selection" << endl;
+         
+           break;
+    }
+    cout << "What do you want to do today: " << endl;
+    cout << "1. Take inventory" << endl;
+    cout << "2. Hire an employee" << endl;
+    cout << "3. Day benefit" << endl;
+    cout << "4. Make a schedule" << endl;
+    cout << "5. Calculate business benefit" << endl;
+    cout << "6. Calculate the pay of your employees" << endl;
+    cout << "-1. EXIT" << endl;
+    
+    cin >> choose;
     }
     //ManagerTrack();
     
-                ofstream outfile2("track.txt", ios::app);
- 
-               outfile2 <<setw(16) << "Log in sheet" << endl;
-               outfile2 << name;
-               outfile2.close();
-    
-    // delete the array at the end
-    delete []pin;
-    return 0;
-}
-// Function for the managing software
-//void ManagerTrack()
-//{
-    
+              
 
-//}
+}
