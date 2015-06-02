@@ -302,12 +302,40 @@ void managerTrack()
                 outfile4<<right << setw(15) << "Sunday";
                 outfile4 <<endl;
                 outfile4 <<left <<setw(9)<<"Shift 1";
+                cout << "Monday: ";
+                string name;
+                cin >> name;
+                outfile4 <<left <<setw(14) << name;
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(16) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 << "moustapha";
+                outfile4 <<endl;
+                 outfile4 <<endl;
+                outfile4 <<left <<setw(9)<<"Shift 2";
                 outfile4 <<left <<setw(14) << "ibahim";
-                outfile4 <<left <<setw(15) << "moustapha";
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(16) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 << "moustapha";
                 outfile4 <<endl;
-                outfile4 << endl;
+                 outfile4 <<endl;
+                outfile4 <<left <<setw(9)<<"Shift 3";
+                outfile4 <<left <<setw(14) << "ibahim";
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(16) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 <<left <<setw(13) << "moustapha";
+                outfile4 <<left <<setw(17) << "moustapha";
+                outfile4 << "moustapha";
                 outfile4 <<endl;
-                outfile4 << endl;
+                 outfile4 <<endl;
+                
+                
                 outfile4.close();
         }
         break;
