@@ -40,15 +40,15 @@ int main(int argc, char** argv) {
     pin[1] = 5612;
     pin[2] = 6310;
     cout << "Hello. Enter a valid pin number to unlock: ";
-    string name;
+    string nameO;
     int enterPin;
     cin >> enterPin;
     
     if(enterPin == 4518 || enterPin == 5612 || enterPin == 6310 )
     {
         cout << "Enter your name: ";
-        cin >> name;
-        cout << "Hello Mr " << name << endl;
+        cin >> nameO;
+        cout << "Hello Mr " << nameO << endl;
     }
     // Checking for wrong pin
     else
@@ -62,8 +62,8 @@ int main(int argc, char** argv) {
         }while(enterPin != 4518 && enterPin != 5612 && enterPin != 6310 );
     
         cout << "Enter your name: ";
-        getline(cin, name);
-        cout << "Hello Mr " << name << endl;
+        getline(cin, nameO);
+        cout << "Hello Mr " << nameO << endl;
     }
     // execution of the managing software
     
@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
     
      ofstream outfile2("track.txt", ios::app);
                outfile2 <<setw(16) << "Log in sheet" << endl;
-               outfile2 <<"Name: " << name << endl;
+               outfile2 <<"Name: " << nameO << endl;
                outfile2.close();  
     
     // delete the array at the end
@@ -301,39 +301,93 @@ void managerTrack()
                 outfile4<<right << setw(15) << "Saturday";
                 outfile4<<right << setw(15) << "Sunday";
                 outfile4 <<endl;
+                
+                // Making the schedule for the first shift 
+                // and writing it in the file
                 outfile4 <<left <<setw(9)<<"Shift 1";
-                cout << "Monday: ";
+                cout <<"Enter the name of the employees that works." << endl;
+                cout << "SHIFT 1......................." << endl;
+                cout << "Monday Shift 1: ";
                 string name;
                 cin >> name;
                 outfile4 <<left <<setw(14) << name;
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(16) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 << "moustapha";
+                cout << "Tuesday Shift 1: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Wednesday Shift 1: ";
+                cin >> name;
+                outfile4 <<left <<setw(16) << name;
+                cout << "Thursday Shift 1: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Friday Shift 1: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Saturday Shift 1: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Sunday Shift 1: ";
+                cin >> name;
+                outfile4 << name;
                 outfile4 <<endl;
-                 outfile4 <<endl;
-                outfile4 <<left <<setw(9)<<"Shift 2";
-                outfile4 <<left <<setw(14) << "ibahim";
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(16) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 << "moustapha";
+                outfile4 << endl;
+                 
+                // Making the schedule for the second shift 
+                // and writing it into a file
+                 cout << "SHIFT 2......................." << endl;
+                 cout << "Monday Shift 2: ";
+                 outfile4 <<left <<setw(9)<<"Shift 2";
+                 
+                cin >> name;
+                outfile4 <<left <<setw(14) << name;
+                cout << "Tuesday Shift 2: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Wednesday Shift 2: ";
+                cin >> name;
+                outfile4 <<left <<setw(16) << name;
+                cout << "Thursday Shift 2: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Friday Shift 2: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Saturday Shift 2: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Sunday Shift 2: ";
+                cin >> name;
+                outfile4 << name;
                 outfile4 <<endl;
-                 outfile4 <<endl;
-                outfile4 <<left <<setw(9)<<"Shift 3";
-                outfile4 <<left <<setw(14) << "ibahim";
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(16) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 <<left <<setw(13) << "moustapha";
-                outfile4 <<left <<setw(17) << "moustapha";
-                outfile4 << "moustapha";
+                outfile4 << endl;
+                
+                // Making the schedule for the third shift
+                // and write in the file
+                cout << "SHIFT 3......................." << endl;
+                 cout << "Monday Shift 3: ";
+                 outfile4 <<left <<setw(9)<<"Shift 3";
+                cin >> name;
+                outfile4 <<left <<setw(14) << name;
+                cout << "Tuesday Shift 3: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Wednesday Shift 3: ";
+                cin >> name;
+                outfile4 <<left <<setw(16) << name;
+                cout << "Thursday Shift 3: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Friday Shift 3: ";
+                cin >> name;
+                outfile4 <<left <<setw(13) << name;
+                cout << "Saturday Shift 3: ";
+                cin >> name;
+                outfile4 <<left <<setw(17) << name;
+                cout << "Sunday Shift 3: ";
+                cin >> name;
+                outfile4 << name;
                 outfile4 <<endl;
-                 outfile4 <<endl;
+                outfile4 << endl;
                 
                 
                 outfile4.close();

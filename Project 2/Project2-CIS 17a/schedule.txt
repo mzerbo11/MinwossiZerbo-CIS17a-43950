@@ -29,15 +29,10 @@ Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha  
 
 
          Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
          Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
-Shift 2  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
-Shift 3  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  minwossi      moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
+Shift 1  minwossi      abdallah     lehr            nobu             linh         abdoul           aziz
 
-Shift 2  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
+Shift 2  david         minwossi     david           ibrahim          linh         nobu             miche
 
-Shift 3  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha
+Shift 3  linh          andrew       nicole          IB               farid        lehr             ben
 
