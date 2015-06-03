@@ -36,3 +36,17 @@ Shift 2  david         minwossi     david           ibrahim          linh       
 
 Shift 3  linh          andrew       nicole          IB               farid        lehr             ben
 
+         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
+Shift 1  rgregrehg     fegergre     rgreger         rgregre          regregre     regergre         regregr
+
+Shift 2  rgregregre    rgregrg      regergreg       rgregreg         regrgr       regreg           regregr
+
+Shift 3  rgregreg      rgrgrg       rgerg           rgregre          rgregr       rgerg            grergerg
+
+         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
+Shift 1  grgregre      rgregreg     regergre        rgregre          rgrgreg      regregre         rgrgr
+
+Shift 2  rgregre       rgrgerg      rgrgre          rgregr           rgrge        rgrege           rgrege
+
+Shift 3  regregre      rgregrg      rgrge           rgergre          regrege      rgregre          rgerger
+

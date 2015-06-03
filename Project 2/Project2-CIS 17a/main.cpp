@@ -288,9 +288,10 @@ void managerTrack()
                 
         }
             break;
-           // Make a schedule
+           // Make a working schedule
         case 4:
         {
+            
             ofstream outfile4("schedule.txt", ios::app);
                 outfile4 << fixed << showpoint << setprecision(2);
                 outfile4<<right << setw(15) << "Monday";
@@ -391,11 +392,43 @@ void managerTrack()
                 
                 
                 outfile4.close();
+                
+               /*ifstream infile("schedule.txt");
+                string word;
+                while(infile >> word)
+                {
+                    cout << word <<"      "<< word<<"      "; 
+                    cout << word<<"      "; 
+                    cout << word <<"      "<< word <<"      ";
+                    cout << word <<"      " << word << endl;
+                    
+                    cout << word <<" "<< word <<"      "; 
+                    cout << word<<"      "; 
+                    cout << word <<"      "<< word <<"      ";
+                    cout << word <<"      " << word <<"      ";
+                    cout << word <<"      "<< word << endl;
+                    
+                     cout << word <<" "<< word <<"      "; 
+                    cout << word<<"      "; 
+                    cout << word <<"      "<< word <<"      ";
+                    cout << word <<"      " << word <<"      ";
+                    cout << word <<"      "<< word << endl;
+                    
+                     cout << word <<" "<< word <<"      "; 
+                    cout << word<<"      "; 
+                    cout << word <<"      "<< word <<"      ";
+                    cout << word <<"      " << word <<"      ";
+                    cout << word <<"      "<< word << endl;
+                }
+                */
+               
         }
         break;
+        
           // Business benefit
         case 5:
             
+            cout << "";
             break;
         // Calculate the pay of the employees
         case 6:

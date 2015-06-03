@@ -90,5 +90,17 @@ public:
     
 };
 
+class mBenefit : public Shift
+{
+private:
+    float invest;
+    float sell;
+    float bussBenefit;
+public:
+    
+
+
+};
+
 #endif	
 
