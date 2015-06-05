@@ -27,6 +27,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>businessBenefit.txt</itemPath>
     <itemPath>output.txt</itemPath>
     <itemPath>output2.txt</itemPath>
     <itemPath>output3.txt</itemPath>
@@ -44,6 +45,8 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="businessBenefit.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="manager.cpp" ex="false" tool="1" flavor2="0">
@@ -83,6 +86,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="businessBenefit.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="manager.cpp" ex="false" tool="1" flavor2="0">

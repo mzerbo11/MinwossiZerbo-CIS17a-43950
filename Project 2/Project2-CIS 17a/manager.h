@@ -93,6 +93,9 @@ public:
 class mBenefit : public Shift
 {
 private:
+     int date;
+    int month;
+    int year;
     float invest;
     float sell;
     float bussBenefit;

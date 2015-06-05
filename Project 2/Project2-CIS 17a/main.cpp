@@ -425,10 +425,198 @@ void managerTrack()
         }
         break;
         
-          // Business benefit
+          // Business benefit & example of inheritance
         case 5:
+        {
+            mBenefit manager;
+            cout << "Enter the date: ";
+            int day3,month3,year3;
+            cin >> day3 >> month3 >> year3;
+            //check for invalid entry
+            while(day3 > 31 || day3 < 1 && month3 > 12 || month3 < 1)
+            {
+              cout << "Invalid date. Enter a valid date: ";
+              cin >> day3 >> month3 >> year3;
+            }
             
-            cout << "";
+            // Date of the day
+                manager.setDate(day3);
+                // month
+                manager.setMonth(month3);
+                // year
+                manager.setYear(year3);
+                
+                float gain;
+                float spent;
+                float sumGain;
+                float sumSpent;
+                ofstream outfile6("businessBenefit.txt", ios::app);
+                
+                outfile6 << manager.giveMonth() << "/";
+                outfile6 << manager.giveDate() << "/";
+                outfile6 << manager.giveYear() << endl << endl;
+                
+                outfile6 << left << setw(5) << "January:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                outfile6 << gain << endl;
+                sumGain += gain;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "February:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "March:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "April:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "May:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "June:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "July:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "August:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "September:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "October:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "November:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl;
+                
+                outfile6 << left << setw(5) << "December:" << endl;
+                outfile6 <<left << setw(10)<<"Amount Spent in products: ";
+                cin  >> gain;
+                sumGain += gain;
+                outfile6 << gain << endl;
+                outfile6 << left << setw(10)<< "Overall selling amount: ";
+                cin >> spent;
+                sumSpent += spent;
+                outfile6 << spent << endl << endl;
+                
+                outfile6<<left<<setw(5)<< "Total Spent: " << sumSpent << endl;
+                outfile6<<left<<setw(5)<< "Total Sold: " << sumGain << endl;
+                float benefitBussi;
+                
+                if(sumGain > sumSpent)
+                {
+                    cout<< "Total Spent: " << sumSpent << endl;
+                    cout<< "Total Sold: " << sumGain << endl;
+                    benefitBussi = sumGain - sumSpent;
+                    cout << "You made a profit of: " << benefitBussi;
+                    outfile6 << left << setw(5) << setprecision(4) ;
+                    outfile6 <<"You made a profit of: " << benefitBussi;
+                }
+                else if(sumGain = sumSpent)
+                {
+                    cout<< "Total Spent: " << sumSpent << endl;
+                    cout<< "Total Sold: " << sumGain << endl;
+                    cout << "You didn't make any benefit this year.";
+                }
+                else
+                {
+                    cout<< "Total Spent: " << sumSpent << endl;
+                    cout<< "Total Sold: " << sumGain << endl;
+                    benefitBussi = sumGain = sumSpent;
+                    cout << "You are in deficit of: " << benefitBussi;
+                    outfile6 << left << setw(5) << setprecision(4) ;
+                    outfile6 <<"You are in deficit of: " << benefitBussi;
+                }
+                
+                
+                
+                cout << manager.giveMonth() << " ";
+                cout << manager.giveDate() << " ";
+                cout << manager.giveYear();
+                
+                 
+                cout<< "Total Spent: " << sumSpent << endl;
+                cout<< "Total Sold: " << sumGain << endl;
+                
+                outfile6.close();
+        }
             break;
         // Calculate the pay of the employees
         case 6:
