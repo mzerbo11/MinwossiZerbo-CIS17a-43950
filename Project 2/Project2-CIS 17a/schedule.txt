@@ -1,52 +1,8 @@
+     
          Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha  moustapha  moustapha  moustapha  
+Shift 1  mike          david        eze             chris            daviv        mike             chris
 
+Shift 2  david         eze          mike            david            chris        david            eze
 
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha           moustapha             moustapha  moustapha  
-
-
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha         moustapha  moustapha  
-
-
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha  moustapha  
-
-
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha          moustapha  
-
-
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  ibahim        moustapha    moustapha       moustapha        moustapha    moustapha        moustapha  
-
-
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  minwossi      abdallah     lehr            nobu             linh         abdoul           aziz
-
-Shift 2  david         minwossi     david           ibrahim          linh         nobu             miche
-
-Shift 3  linh          andrew       nicole          IB               farid        lehr             ben
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  rgregrehg     fegergre     rgreger         rgregre          regregre     regergre         regregr
-
-Shift 2  rgregregre    rgregrg      regergreg       rgregreg         regrgr       regreg           regregr
-
-Shift 3  rgregreg      rgrgrg       rgerg           rgregre          rgregr       rgerg            grergerg
-
-         Monday        Tuesday      Wednesday       Thursday         Friday       Saturday         Sunday
-Shift 1  grgregre      rgregreg     regergre        rgregre          rgrgreg      regregre         rgrgr
-
-Shift 2  rgregre       rgrgerg      rgrgre          rgregr           rgrge        rgrege           rgrege
-
-Shift 3  regregre      rgregrg      rgrge           rgergre          regrege      rgregre          rgerger
+Shift 3  eze           chris        david           eze              bobby        linh             ben
 

@@ -92,6 +92,13 @@ void managerTrack()
     
     int choose;
     cin >> choose;
+    while(cin.fail())
+    { 
+        cin.clear(); //This corrects the stream.
+	cin.ignore(); // This skips the left over error in stream
+        cout << "Invalid datatype. Please enter again: ";
+        cin >> choose;        
+    }
     
     while(choose != -1)
     {
@@ -115,9 +122,23 @@ void managerTrack()
            cout << "Enter The date: ";
            
            cin >> day >> month >> year;
+            while(cin.fail())
+    { 
+        cin.clear(); //This corrects the stream.
+	cin.ignore(); // This skips the left over error in stream
+        cout << "Invalid datatype. Please enter again: ";
+        cin >> day >> month >> year;        
+    }
             cout << "How many categories of items where delivered: ";
             int itemNum;
             cin >> itemNum;
+             while(cin.fail())
+    { 
+        cin.clear(); //This corrects the stream.
+	cin.ignore(); // This skips the left over error in stream
+        cout << "Invalid datatype. Please enter again: ";
+        cin >> itemNum;        
+    }
             // Check for negative entry
             if(itemNum < 0)
             {
@@ -141,11 +162,25 @@ void managerTrack()
                 {
                     cout << "Category: ";
                     cin >> category;
+                     while(cin.fail())
+                    { 
+                    cin.clear(); //This corrects the stream.
+                    cin.ignore(); // This skips the left over error in stream
+                    cout << "Invalid datatype. Please enter again: ";
+                    cin >> category;        
+                    }
                     received[i].items = category;
                     
                     // Number of each item received
                     cout << "Number received: ";
                     cin >> numReceived;
+                     while(cin.fail())
+                     { 
+                    cin.clear(); //This corrects the stream.
+                    cin.ignore(); // This skips the left over error in stream
+                    cout << "Invalid datatype. Please enter again: ";
+                    cin >> numReceived;        
+                    }
                     received[i].numberItem = numReceived;
                     
                 }
@@ -185,6 +220,13 @@ void managerTrack()
             int date1,month1,year1;
             
             cin >> date1 >> month1 >> year1;
+             while(cin.fail())
+            { 
+        cin.clear(); //This corrects the stream.
+	cin.ignore(); // This skips the left over error in stream
+        cout << "Invalid datatype. Please enter again: ";
+        cin >> date1 >> month1 >> year1;        
+            }
             
                 do
                 {
@@ -195,13 +237,34 @@ void managerTrack()
                 cout << "Enter the employee First name: ";
                 string firstName;
                 cin >> firstName;
+                 while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> firstName;        
+                }
                 cout << "Enter the employee last name: ";
                 string lastName;
                 cin >> lastName;
+                 while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> lastName;        
+                }
                 cout << "Enter the employee phone number: ";
                 int phoneNum;
                 // for phone number format design
                 cin >> phoneNum;
+                 while(cin.fail())
+                { 
+                   cin.clear(); //This corrects the stream.
+                    cin.ignore(); // This skips the left over error in stream
+                    cout << "Invalid datatype. Please enter again: ";
+                    cin >> phoneNum;        
+    }
                 hiring.setPhonenum(phoneNum);
                 hiring.setfName(firstName);
                 hiring.setlName(lastName);
@@ -227,6 +290,13 @@ void managerTrack()
             cout << "Enter the date: ";
             int day2,month2,year2;
             cin >> day2 >> month2 >> year2;
+             while(cin.fail())
+            { 
+        cin.clear(); //This corrects the stream.
+	cin.ignore(); // This skips the left over error in stream
+        cout << "Invalid datatype. Please enter again: ";
+        cin >> day2 >> month2 >> year2;        
+            }
             //check for invalid entry
             while(day2 > 31 || day2 < 1 && month2 > 12 || month2 < 1)
             {
@@ -254,6 +324,13 @@ void managerTrack()
                 cout << "Enter the opening balance:";
                 float openBal;
                 cin >> openBal;
+                 while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                 cin >> choose;        
+                }
                 
                 // setting the opening balance
                 benefitDay.getObalance(openBal);
@@ -261,6 +338,13 @@ void managerTrack()
                 cout << "Enter the closing balance: ";
                 float closeBal;
                 cin >> closeBal;
+                 while(cin.fail())
+                { 
+                    cin.clear(); //This corrects the stream.
+                    cin.ignore(); // This skips the left over error in stream
+                    cout << "Invalid datatype. Please enter again: ";
+                    cin >> choose;        
+                }
                 
                 //setting th closing balance
                 benefitDay.getCbalance(closeBal);
@@ -292,7 +376,7 @@ void managerTrack()
         case 4:
         {
             
-            ofstream outfile4("schedule.txt", ios::app);
+            ofstream outfile4("schedule.txt");
                 outfile4 << fixed << showpoint << setprecision(2);
                 outfile4<<right << setw(15) << "Monday";
                 outfile4<<right << setw(15) << "Tuesday";
@@ -311,24 +395,73 @@ void managerTrack()
                 cout << "Monday Shift 1: ";
                 string name;
                 cin >> name;
+                 while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(14) << name;
                 cout << "Tuesday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Wednesday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(16) << name;
                 cout << "Thursday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Friday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Saturday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Sunday Shift 1: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 << name;
                 outfile4 <<endl;
                 outfile4 << endl;
@@ -340,24 +473,73 @@ void managerTrack()
                  outfile4 <<left <<setw(9)<<"Shift 2";
                  
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(14) << name;
                 cout << "Tuesday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Wednesday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(16) << name;
                 cout << "Thursday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Friday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Saturday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Sunday Shift 2: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 << name;
                 outfile4 <<endl;
                 outfile4 << endl;
@@ -368,24 +550,73 @@ void managerTrack()
                  cout << "Monday Shift 3: ";
                  outfile4 <<left <<setw(9)<<"Shift 3";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(14) << name;
                 cout << "Tuesday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Wednesday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(16) << name;
                 cout << "Thursday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Friday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(13) << name;
                 cout << "Saturday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 <<left <<setw(17) << name;
                 cout << "Sunday Shift 3: ";
                 cin >> name;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> name;        
+                }
                 outfile4 << name;
                 outfile4 <<endl;
                 outfile4 << endl;
@@ -431,6 +662,13 @@ void managerTrack()
             mBenefit manager;
             cout << "Enter the date: ";
             int day3,month3,year3;
+            while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> day3 >> month3 >> year3;        
+                }
             cin >> day3 >> month3 >> year3;
             //check for invalid entry
             while(day3 > 31 || day3 < 1 && month3 > 12 || month3 < 1)
@@ -459,120 +697,288 @@ void managerTrack()
                 outfile6 << left << setw(5) << "January:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;        
+                }
                 outfile6 << gain << endl;
                 sumGain += gain;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "February:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "March:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "April:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "May:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "June:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "July:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "August:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "September:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "October:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "November:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl;
                 
                 outfile6 << left << setw(5) << "December:" << endl;
                 outfile6 <<left << setw(10)<<"Amount Spent in products: ";
                 cin  >> gain;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> gain;
+                }
                 sumGain += gain;
                 outfile6 << gain << endl;
                 outfile6 << left << setw(10)<< "Overall selling amount: ";
                 cin >> spent;
+                while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> spent;        
+                }
                 sumSpent += spent;
                 outfile6 << spent << endl << endl;
                 
@@ -633,6 +1039,13 @@ void managerTrack()
         cout << "How many employees are there in the company: " ;
         int empl;
         cin >> empl; // number of employee
+        while(cin.fail())
+                { 
+                cin.clear(); //This corrects the stream.
+                cin.ignore(); // This skips the left over error in stream
+                cout << "Invalid datatype. Please enter again: ";
+                cin >> empl;
+                }
         int count = 1;
         globalPayroll employees[empl]; // array of structure for employees
         for(int i = 0; i < empl; i++)
